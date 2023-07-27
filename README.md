@@ -11,3 +11,25 @@ Example Input: ***Ip_Obsficate("/home/kali/Project_Folder/hello.py", "/home/kali
 * Operation:
     * 0 : Obsficate the Input_File
     * 1 : Deobsficate the Input_File
+
+## Example report:
+
+# Interesting IPs 
+## Last Updated: 27-07-2023
+---
+- [x] 105.109.112.111
+- [ ] 114.116.32.112
+- [ ] 116.121.44.32
+- [ ] 111.115.44.32
+- [ ] 114.101.44.32
+- [ ] 112.121.112.101
+- [ ] 114.99.108.105
+- [ ] 10.102.114.111
+---
+> Uncommon Geolocation: An IP address with reverse DNS discrepancies is attempting to access sensitive areas of your network. Verify its legitimacy immediately.
+---
+- [ ] 101.101.112.32
+- [ ] 10.10.100.101
+---
+> Attention: These have been listed in our database as a known source of malware distribution. Investigate to ensure your security is not compromised.
+---
