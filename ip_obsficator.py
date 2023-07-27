@@ -1,3 +1,11 @@
+##########################
+# IP_OBSFICATOR
+# Created by: Connor-Maddison
+# Creation Date: 27/07/2023
+# Last Updated: 27/07/2023
+##########################
+
+
 import binascii, datetime, random, re, yaml
 
 class Ip_Obsficate():
