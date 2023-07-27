@@ -6,7 +6,12 @@
 ##########################
 
 
-import binascii, datetime, random, re, yaml, logging
+import re, logging
+from yaml import safe_load
+from random import randint
+from datetime import datetime
+from binascii import unhexlify
+from pathlib import Path
 
 
 ########################################################################
@@ -109,7 +114,7 @@ class Ip_Obsficate():
                 conv_hex = '0' + conv_hex
             uni_bytes += conv_hex
         
-        return binascii.unhexlify(uni_bytes)
+        return unhexlify(uni_bytes)
 
 
     ########################################################################
@@ -119,7 +124,7 @@ class Ip_Obsficate():
     def Init_Header(SELF):
         logger.info(f"Initialising Interesting_IPs.md file")
         with open(f"{SELF.SAVE_LOC}/Interesting_IPs.md", "w") as file:
-            file.write(f"# Interesting IPs \n## Last Updated: {datetime.datetime.now().strftime('%d-%m-%Y')}\n---\n ")
+            file.write(f"# Interesting IPs \n## Last Updated: {datetime.now().strftime('%d-%m-%Y')}\n---\n ")
 
     def Obsficate_Writer(SELF, Content):
         logger.info(f"Writing to {SELF.SAVE_LOC}/Interesting_IPs.md file")
@@ -176,14 +181,14 @@ class Ip_Obsficate():
 
             logger.debug(f"Created IP: {group}")
             mark = " "
-            check_chance = random.randint(0,100)
+            check_chance = randint(0,100)
             if check_chance < 6:
                 ## 6% chance
                 mark = "x"
 
             ips += f"- [{mark}] {group[0]}.{group[1]}.{group[2]}.{group[3]}\n"
 
-            comment_chance = random.randint(0,100)
+            comment_chance = randint(0,100)
             if comment_chance < 4: 
                 ## 4% chance 
                 ips += SELF.Comment_Decoy()         
@@ -213,17 +218,18 @@ class Ip_Obsficate():
 
     def Load_Decoys(SELF):
         logger.debug(f"Located decoys.yaml file")
-        with open("./decoys.yaml", "r") as yaml_file:
-            content = yaml.safe_load(yaml_file)
+        path = Path(__file__).parent / "./decoys.yaml"
+        with open(path, "r") as yaml_file:
+            content = safe_load(yaml_file)
         
         logger.info(f"Created decoys selection")
         return content
 
     def Comment_Decoy(SELF):
         
-        random_alert = SELF.DECOYS["Alert"][random.randint(0,len(SELF.DECOYS["Alert"])-1)]
-        random_intro = SELF.DECOYS["Intro"][random.randint(0,len(SELF.DECOYS["Intro"])-1)]
-        random_action = SELF.DECOYS["Action"][random.randint(0,len(SELF.DECOYS["Action"])-1)]
+        random_alert = SELF.DECOYS["Alert"][randint(0,len(SELF.DECOYS["Alert"])-1)]
+        random_intro = SELF.DECOYS["Intro"][randint(0,len(SELF.DECOYS["Intro"])-1)]
+        random_action = SELF.DECOYS["Action"][randint(0,len(SELF.DECOYS["Action"])-1)]
 
         decoy_comment = f"---\n> {random_alert}{random_intro}{random_action}\n---\n"
         logger.debug(f"Created a Decoy comment : {decoy_comment}")
