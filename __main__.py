@@ -105,10 +105,6 @@ class Ip_Obsficate():
             if (type(dec) != int):
                 dec = int(dec)
 
-            if (dec == 0):
-                logger.debug(f"Removing Null bytes")
-                continue
-
             conv_hex = hex(dec)[2:]
             if (len(conv_hex) <= 1):
                 conv_hex = '0' + conv_hex
@@ -136,7 +132,7 @@ class Ip_Obsficate():
     def Init_Deobsfication_File(SELF):
         logger.info(f"Creating Conversion file (Notes.txt)")
         with open(f"{SELF.SAVE_LOC}/Notes.txt", "w") as file:
-            file.write(f"\n")
+            file.write(f"")
 
     def Deobsficate_Writer(SELF, Content):
         logger.info(f"Writing to Conversion file ({SELF.SAVE_LOC}/Notes.txt)")
