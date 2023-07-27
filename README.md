@@ -1,16 +1,43 @@
-# ip_obsficate
+# ip_obsficator
 Obsficate your content in the format of an unusual IP list security report markdown file. The produced report file is styled as a list of Ip's in a checklist form with randomly generated occasional comments to look like an engineers investigation notes. 
 
 You can also add any extra text you desire as long as it is not in the format of an IP.
 
 ## Inputs:
-Example Input: ***Ip_Obsficate("/home/kali/Project_Folder/hello.py", "/home/kali/Project_Folder/", [0 | 1])***
+Example Input: ***python3 ip_obsficator.py | `Operation` | `Input_File` | `Save_Loc`***
 
 * Input_File : This is the file to be **Obsficated** or **Deobsficated** 
 * Save_Loc : This is the location to save the **Obsficated Markdown File** ***(Interesting_IPs.md)*** or the **Deobsficated text File** ***(Notes.txt)***
 * Operation:
     * 0 : Obsficate the Input_File
     * 1 : Deobsficate the Input_File
+
+```
+Example Use: 
+
+    python3 ip_obsficator [OPTION] [ARGS]
+    python3 ip_obsficator.py obsficate -i /PATH/TARGET_FILE.EXT -o /PATH 
+
+
+ARGS:
+----------------------------------------------
+-h  : 
+    : Shows this help page
+-i  : <Path/File>
+    : Target input file (enter relative or absolute path to file) 
+-o  : <Path>
+    : Output file path (enter relative or absolute path) <DEFAULT = Current Directory>
+-v  : 
+    : Print verbose output
+
+
+OPTIONS:
+----------------------------------------------
+To select between either obsficate or deobsficate either use their fullname or [0 | 1]
+
+obsficate | [0] : Obsficate the target file
+deobsficate | [1] : Deobsficate the target file
+```
 
 ## Example report:
 
