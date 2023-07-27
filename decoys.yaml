@@ -1,0 +1,65 @@
+Alert:
+  [ "Warning: ",
+    "Attention: ",
+    "Caution: ",
+    "Alert: ",
+    "Critical: ",
+    "Potential Threat: ", 
+    "Abnormal Activity: ",
+    "Risk Identified: ",
+    "Red Flag: ",
+    "Suspected Phishing Attempt: ",
+    "Unusual Access Detected: ",
+    "Network Anomaly: ",
+    "Uncommon Geolocation: ",
+    "Port Scanning Detected: ",
+    "Potential DoS Attack: "
+    ]
+
+Intro:
+  [
+    "Our system has detected an unusual IP address attempting to access the network.",
+    "Some of these IPs have been flagged as potentially dangerous due to invalid format.",
+    "An unidentified IP address from a high-risk location is attempting to establish unauthorized connections.",
+    "Your network's firewall has blocked access from IP range which is known for suspicious activities.",
+    "These IP addresses are exhibiting erratic behavior, attempting multiple failed login attempts.",
+    "An IP address from an unfamiliar country is continuously pinging our devices.",
+    "One of these IP addresses is sending unusually large data packets, potentially indicating misconfiguration or a cyberattack.",
+    "These have been listed in our database as a known source of malware distribution.",
+    "An IP address with reverse DNS discrepancies is attempting to access sensitive areas of your network.",
+    "Our anti-phishing protocols was triggerd during communication from this IP.",
+    "An IP address with atypical login patterns has been spotted on your network.",
+    "We've noticed an IP address attempting to access multiple ports on our system.",
+    "An IP address from a high-risk region is consistently probing your network's vulnerabilities.",
+    "The IP address above is communicating with numerous unknown devices on your local network.",
+    "Your system is receiving a large number of requests from an unidentified IP address.",
+    "An IP address is attempting to bypass your firewall using multiple proxy servers.",
+    "The IP address below is attempting to establish connections during odd hours.",
+    "Emails from a specific IP address are exhibiting characteristics of phishing attempts.",
+    "An IP address is systematically scanning the network for open ports.",
+    "An IP address is connecting from a location that rarely accesses our network."
+   ]
+
+Action:
+  [
+    " Investigate immediately to prevent potential security breaches.",
+    " Verify and correct the configuration to ensure network integrity.",
+    " Take action to protect your data and privacy.",
+    " Stay vigilant and consider additional security measures.",
+    " Secure your accounts and consider blacklisting the IP.",
+    " Investigate further to prevent potential DDoS attacks.",
+    " Take immediate action to address the issue.",
+    " Quarantine the device and initiate a thorough malware scan.",
+    " Verify the legitimacy of this connection.",
+    " Be cautious of any emails or links from this source.",
+    " Investigate to ensure your security is not compromised.",
+    " Check for misconfigurations or potential intrusion attempts.",
+    " Take preventive measures to safeguard your data.",
+    " Verify its legitimacy immediately.",
+    " Consider implementing rate limiting for protection.",
+    " Block this IP to prevent unauthorized access.",
+    " Monitor closely for potential security breaches.",
+    " Avoid clicking on any suspicious links.",
+    " Check firewall settings and strengthen security.",
+    " Evaluate the legitimacy of this connection."
+  ]
